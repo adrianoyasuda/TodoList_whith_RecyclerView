@@ -6,17 +6,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import br.com.edu.ifpr.yasuda.room.db.AppDatabase
-import br.com.edu.ifpr.yasuda.room.db.dao.PersonDao
-import br.com.edu.ifpr.yasuda.room.entities.Person
-import br.com.edu.ifpr.yasuda.room.ui.PeopleAdapter
-import br.com.edu.ifpr.yasuda.room.ui.PeopleAdapterListener
+import br.com.edu.ifpr.yasuda.room.db.dao.TaskDao
+import br.com.edu.ifpr.yasuda.room.entities.Task
+import br.com.edu.ifpr.yasuda.room.ui.TasksAdapter
+import br.com.edu.ifpr.yasuda.room.ui.TasksAdapterListener
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), PeopleAdapterListener {
+class MainActivity : AppCompatActivity(), TasksAdapterListener {
 
-    lateinit var personDao: PersonDao
-    lateinit var adapter: PeopleAdapter
-    var personEditing: Person? = null
+    lateinit var taskDao: TaskDao
+    lateinit var adapter: TasksAdapter
+    var taskEditing: Task? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,53 +25,53 @@ class MainActivity : AppCompatActivity(), PeopleAdapterListener {
         val db =
             Room.databaseBuilder(applicationContext,
             AppDatabase::class.java,
-            "person.db")
+            "task.db")
             .allowMainThreadQueries()
             .build()
-        personDao = db.personDao()
-        personDao.getAll()
+        taskDao = db.taskDao()
+        taskDao.getAll()
 
-        bt_save.setOnClickListener { savePerson() }
+        bt_save.setOnClickListener { saveTask() }
 
 
         loadData()
     }
 
-    private fun removePerson(person: Person){
-        personDao.remove(person)
-        loadData()
+//    private fun removePerson(task: Task){
+//        taskDao.remove(task)
+//        loadData()
+//    }
+
+    private fun editTask(task: Task) {
+        tf_title.setText(task.titl)
+        tf_desc.setText(task.desc)
+
+        tf_title.requestFocus()
+
+        taskEditing = task
     }
 
-    private fun editPerson(person: Person) {
-        tf_firstName.setText(person.firstname)
-        tf_lastName.setText(person.lastname)
-
-        tf_firstName.requestFocus()
-
-        personEditing = person
-    }
-
-    private fun savePerson(){
-        val firstName = tf_firstName.text.toString()
-        val lastName = tf_lastName.text.toString()
+    private fun saveTask(){
+        val firstName = tf_title.text.toString()
+        val lastName = tf_desc.text.toString()
 
 
-        if (personEditing != null){
-            personEditing?.let { person ->
-                person.firstname = firstName
-                person.lastname = lastName
-                personDao.update(person)
+        if (taskEditing != null){
+            taskEditing?.let { task ->
+                task.titl = firstName
+                task.desc = lastName
+                taskDao.update(task)
 
-                adapter.updatePerson(person)
+                adapter.updateTask(task)
             }
 
         }
         else{
-            var person = Person(firstName, lastName)
-            val id = personDao.insert(person).toInt()
-            person = personDao.findById(id)!!
+            var task = Task(firstName, lastName)
+            val id = taskDao.insert(task).toInt()
+            task = taskDao.findById(id)!!
 
-            val position = adapter.addPerson(person)
+            val position = adapter.addTask(task)
             list_people.scrollToPosition(position)
 
         }
@@ -79,9 +79,9 @@ class MainActivity : AppCompatActivity(), PeopleAdapterListener {
     }
 
     private fun loadData(){
-        val people = personDao.getAll()
+        val task = taskDao.getAll()
 
-        adapter = PeopleAdapter(people.toMutableList(), this)
+        adapter = TasksAdapter(task.toMutableList(), this)
         list_people.adapter = adapter
 
         list_people.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
@@ -90,18 +90,18 @@ class MainActivity : AppCompatActivity(), PeopleAdapterListener {
     }
 
     private fun cleanFields(){
-        tf_firstName.text.clear()
-        tf_lastName.text.clear()
-        tf_firstName.requestFocus()
+        tf_title.text.clear()
+        tf_desc.text.clear()
+        tf_title.requestFocus()
 
-        personEditing = null
+        taskEditing = null
     }
 
-    override fun personRemoved(person: Person) {
-        personDao.remove(person)
+    override fun taskRemoved(task: Task) {
+        taskDao.remove(task)
     }
 
-    override fun personClicked(person: Person) {
-        editPerson(person)
+    override fun taskClicked(task: Task) {
+        editTask(task)
     }
 }

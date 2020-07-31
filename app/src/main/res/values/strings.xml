@@ -4,4 +4,6 @@
     <string name="last_name">Sobrenome</string>
     <string name="title">Título</string>
     <string name="save">Salvar</string>
+    <string name="titulo">Título</string>
+    <string name="desc">Descrição</string>
 </resources>
