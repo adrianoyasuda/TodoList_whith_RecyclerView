@@ -37,14 +37,10 @@ class MainActivity : AppCompatActivity(), TasksAdapterListener {
         loadData()
     }
 
-//    private fun removePerson(task: Task){
-//        taskDao.remove(task)
-//        loadData()
-//    }
 
     private fun editTask(task: Task) {
-        tf_title.setText(task.titl)
-        tf_desc.setText(task.desc)
+        tf_title.setText(task.title)
+        tf_desc.setText(task.description)
 
         tf_title.requestFocus()
 
@@ -52,14 +48,14 @@ class MainActivity : AppCompatActivity(), TasksAdapterListener {
     }
 
     private fun saveTask(){
-        val firstName = tf_title.text.toString()
-        val lastName = tf_desc.text.toString()
+        val title = tf_title.text.toString()
+        val description = tf_desc.text.toString()
 
 
         if (taskEditing != null){
             taskEditing?.let { task ->
-                task.titl = firstName
-                task.desc = lastName
+                task.title = title
+                task.description = description
                 taskDao.update(task)
 
                 adapter.updateTask(task)
@@ -67,7 +63,7 @@ class MainActivity : AppCompatActivity(), TasksAdapterListener {
 
         }
         else{
-            var task = Task(firstName, lastName)
+            var task = Task(title, description, false)
             val id = taskDao.insert(task).toInt()
             task = taskDao.findById(id)!!
 
@@ -103,5 +99,10 @@ class MainActivity : AppCompatActivity(), TasksAdapterListener {
 
     override fun taskClicked(task: Task) {
         editTask(task)
+    }
+
+    override fun taskUpdate(task: Task) {
+        taskDao.update(task)
+        loadData()
     }
 }

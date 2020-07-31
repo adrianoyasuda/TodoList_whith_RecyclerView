@@ -11,8 +11,8 @@ interface TaskDao {
     @Query("SELECT * FROM task WHERE id = :id LIMIT 1")
     fun findById(id: Int): Task?
 
-    @Query("SELECT * FROM task WHERE title LIKE :titl AND description LIKE :desc")
-    fun findByName(titl: String, desc: String): List<Task>
+    @Query("SELECT * FROM task WHERE title LIKE :title AND description LIKE :description")
+    fun findByName(title: String, description: String): List<Task>
 
     @Insert
     fun  insert(task: Task): Long

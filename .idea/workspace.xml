@@ -17,19 +17,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/AppDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/dao/PersonDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/dao/TaskDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/entities/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/entities/Task.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/PeopleAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/PeopleAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/PeopleAdapterListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/PeopleAdapterListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/dao/TaskDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/db/dao/TaskDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/entities/Task.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/entities/Task.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/TasksAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/TasksAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/TasksAdapterListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/com/edu/ifpr/yasuda/room/ui/TasksAdapterListener.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +54,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ToDoList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tasks" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -142,10 +135,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="547" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596211851881">
+    <state x="751" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1596217023079">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="547" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596211851881" />
+    <state x="751" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596217023079" />
+    <state x="547" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596212098735">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="547" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596212098735" />
     <state x="707" y="417" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596207700347">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -158,25 +155,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="818" y="338" key="AndroidCreateXmlResourceDialog/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596211719960" />
-    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1596210480841">
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1596215783672">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596210480841" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1596208602783">
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596215783672" />
+    <state width="1877" height="199" key="GridCell.Tab.0.bottom" timestamp="1596217765318">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596208602783" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1596208602783">
+    <state width="1877" height="199" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596217765318" />
+    <state width="1877" height="199" key="GridCell.Tab.0.center" timestamp="1596217765318">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596208602783" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1596208602783">
+    <state width="1877" height="199" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596217765318" />
+    <state width="1877" height="199" key="GridCell.Tab.0.left" timestamp="1596217765318">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596208602783" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1596208602783">
+    <state width="1877" height="199" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596217765318" />
+    <state width="1877" height="199" key="GridCell.Tab.0.right" timestamp="1596217765318">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596208602783" />
+    <state width="1877" height="199" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1280.994@0.0.1920.1050" timestamp="1596217765318" />
   </component>
 </project>
