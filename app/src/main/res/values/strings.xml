@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Room</string>
+    <string name="app_name">To do List</string>
     <string name="first_name">Nome</string>
     <string name="last_name">Sobrenome</string>
     <string name="title">Título</string>
